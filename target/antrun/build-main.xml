@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project name="maven-antrun-" default="main">
-  <target name="main">
-    <delete>
-      <fileset includes="*InjectLib*.jar" dir="F:/dev/plugins" />
-    </delete>
-    <copy file="C:\Users\Kolja\Documents\TransientCodes\Development\IdeaProjects\InjectLib\target/InjectLib.jar" todir="F:/dev/plugins" />
-  </target>
-</project>
