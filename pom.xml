@@ -9,15 +9,7 @@
     <version>0.0.1</version>
     <packaging>jar</packaging>
 
-    <name>injectlib</name>
-
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub OWNER Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/TransientCodes/InjectLib</url>
-        </repository>
-    </distributionManagement>
+    <name>InjectLib</name>
 
     <properties>
         <java.version>21</java.version>
