@@ -10,11 +10,7 @@ class InjectLib : JavaPlugin() {
     }
 
     override fun onEnable() {
-        logger.info { "enable" }
-
         prefix = "<dark_gray>[<gold>Inject<green>Lib<dark_gray>]"
-
-        logger.info { "finished. Prefix: $prefix" }
     }
 
     override fun onDisable() {
