@@ -6,11 +6,12 @@ class InjectLib : JavaPlugin() {
 
     companion object {
         @JvmStatic
-        var prefix = "<dark_gray>[<gold>Inject<green>Lib<dark_gray>]"
+        lateinit var prefix: String
+            private set
     }
 
     override fun onEnable() {
-
+        prefix = "<dark_gray>[<gold>Inject<green>Lib<dark_gray>]"
     }
 
     override fun onDisable() {
