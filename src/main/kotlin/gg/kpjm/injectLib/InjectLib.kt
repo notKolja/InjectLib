@@ -6,8 +6,7 @@ class InjectLib : JavaPlugin() {
 
     companion object {
         @JvmStatic
-        lateinit var prefix: String
-            private set
+        var prefix: String = "<dark_gray>[<gold>Inject<green>Lib<dark_gray>]"
     }
 
     override fun onEnable() {
