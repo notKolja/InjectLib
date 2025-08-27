@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>gg.kpjm</groupId>
-    <artifactId>injectlib</artifactId>
-    <version>0.0.1</version>
+    <artifactId>InjectLib</artifactId>
+    <version>0.0.4</version>
     <packaging>jar</packaging>
 
     <name>InjectLib</name>
@@ -18,8 +18,12 @@
     </properties>
 
     <build>
+        <finalName>InjectLib</finalName>
+
         <defaultGoal>clean package</defaultGoal>
+
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
+
         <plugins>
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
@@ -48,10 +52,25 @@
                         <goals>
                             <goal>shade</goal>
                         </goals>
+                        <configuration>
+                            <shadedArtifactAttached>false</shadedArtifactAttached>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/*.SF</exclude>
+                                        <exclude>META-INF/*.DSA</exclude>
+                                        <exclude>META-INF/*.RSA</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
+
         <resources>
             <resource>
                 <directory>src/main/resources</directory>

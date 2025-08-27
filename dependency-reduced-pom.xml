@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>gg.kpjm</groupId>
   <artifactId>injectlib</artifactId>
-  <name>injectlib</name>
-  <version>0.0.1</version>
+  <name>InjectLib</name>
+  <version>0.0.3</version>
   <build>
     <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
     <defaultGoal>clean package</defaultGoal>
@@ -60,13 +60,6 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
-  <distributionManagement>
-    <repository>
-      <id>github</id>
-      <name>GitHub OWNER Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/TransientCodes/InjectLib</url>
-    </repository>
-  </distributionManagement>
   <properties>
     <kotlin.version>2.0.21</kotlin.version>
     <java.version>21</java.version>
