@@ -6,7 +6,7 @@
 
     <groupId>gg.kpjm</groupId>
     <artifactId>InjectLib</artifactId>
-    <version>0.0.3</version>
+    <version>0.1.0</version>
     <packaging>jar</packaging>
 
     <name>InjectLib</name>
@@ -69,29 +69,29 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <version>3.1.0</version>
-                <executions>
-                    <execution>
-                        <id>post-package</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                        <configuration>
-                            <target>
-                                <delete>
-                                    <fileset dir="F:/dev/plugins" includes="*InjectLib*.jar"/>
-                                </delete>
-                                <copy file="${project.build.directory}/${project.build.finalName}.jar"
-                                      todir="F:/dev/plugins"/>
-                            </target>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-antrun-plugin</artifactId>-->
+<!--                <version>3.1.0</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>post-package</id>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>run</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <target>-->
+<!--                                <delete>-->
+<!--                                    <fileset dir="F:/dev/plugins" includes="*InjectLib*.jar"/>-->
+<!--                                </delete>-->
+<!--                                <copy file="${project.build.directory}/${project.build.finalName}.jar"-->
+<!--                                      todir="F:/dev/plugins"/>-->
+<!--                            </target>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
         </plugins>
 
         <resources>
