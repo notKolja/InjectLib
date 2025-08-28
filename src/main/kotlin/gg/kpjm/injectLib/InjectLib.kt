@@ -1,5 +1,6 @@
 package gg.kpjm.injectLib
 
+import gg.kpjm.injectLib.injections.IntegerInjections.Companion.translateRoman
 import org.bukkit.plugin.java.JavaPlugin
 
 class InjectLib : JavaPlugin() {
