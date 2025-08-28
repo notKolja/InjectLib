@@ -9,6 +9,8 @@ A lightweight Kotlin library for **Paper/Spigot 1.21+** that provides useful ext
   - `Player.sendMiniMessageActionBarWithPrefix(text)`
   
   Default prefix: `<dark_gray>[<gold>Inject<green>Lib<dark_gray>]`
+  Prefix settable via: `InjectLib.setPrefix("<red>Mini<dark_purple>Message")`
+  
 - **ItemMeta Extension**
   - `ItemMeta.setCustomModelData(float)` – sets Custom Model Data via a float value.
 - **Number Formatting (Euro)**
