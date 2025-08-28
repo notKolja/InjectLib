@@ -12,18 +12,18 @@ class DoubleInjections {
          * example: 10000,00 formats to 10.000,00€
          */
 
-        fun Double.formatEuro(d: Double): String {
+        fun Double.formatEuro(): String {
             val formatter = NumberFormat.getCurrencyInstance(Locale.GERMANY)
-            return formatter.format(d).trim()
+            return formatter.format(this).trim()
         }
 
         /**
          * Formats a Double to a Currency format without Euro sign
          * example: 10000,00 formats to 10.000,00
          */
-        fun Double.formatEuroWithoutSymbol(d: Double): String {
+        fun Double.formatEuroWithoutSymbol(): String {
             val formatter = NumberFormat.getCurrencyInstance(Locale.GERMANY)
-            return formatter.format(d).replace("€", "").trim()
+            return formatter.format(this).replace("€", "").trim()
         }
     }
 
