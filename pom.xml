@@ -6,7 +6,7 @@
 
     <groupId>gg.kpjm</groupId>
     <artifactId>InjectLib</artifactId>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
     <packaging>jar</packaging>
 
     <name>InjectLib</name>
