@@ -5,9 +5,9 @@ class IntegerInjections {
     companion object {
         private val romanNumerals = arrayOf("", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X")
 
-        fun Integer.translateRoman(i: Int): String {
-            if (i == 0) return ""
-            return if (i in 1..10) romanNumerals[i] else i.toString()
+        fun Int.translateRoman(): String {
+            if (this == 0) return ""
+            return if (this in 1..10) romanNumerals[this] else this.toString()
         }
     }
 
