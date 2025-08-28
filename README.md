@@ -69,8 +69,5 @@ InjectLib is currently in **Alpha**:
 2. Discuss ideas: [Discussions](https://github.com/notKolja/InjectLib/discussions)
 3. Contribute code: Pull requests welcome!
 
-## 📜 License
-Released under the [MIT License](https://github.com/notKolja/InjectLib/blob/master/LICENSE).
-
 ---
 *Made with ❤️ for the Minecraft plugin community.*
