@@ -18,6 +18,16 @@ class DoubleInjections {
         }
 
         /**
+         * Formats a Double to a Currency format with custom Currency sign
+         * example: 10000,00 formats to 10.000,00€
+         */
+
+        fun Double.formatCurrency(locale: Locale): String {
+            val formatter = NumberFormat.getCurrencyInstance(locale)
+            return formatter.format(this).trim()
+        }
+
+        /**
          * Formats a Double to a Currency format with Euro sign
          * example: 10000,00 formats to 10.000,00€
          */
