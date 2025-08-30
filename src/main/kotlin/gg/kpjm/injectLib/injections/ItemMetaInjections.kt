@@ -4,22 +4,25 @@ import net.kyori.adventure.text.minimessage.MiniMessage
 import org.bukkit.Color
 import org.bukkit.inventory.meta.ItemMeta
 import org.jetbrains.annotations.ApiStatus
-
 @ApiStatus.Experimental
 class ItemMetaInjections {
 
     companion object {
 
         /**
-         * sets the displayname with minimessage
+         * Parses the provided MiniMessage string and applies it as the display
+         * name of this item meta.
+         *
+         * @param s MiniMessage string to deserialize.
          */
         fun ItemMeta.setMiniMessageDisplayName(s: String) {
             this.displayName(MiniMessage.miniMessage().deserialize(s))
         }
 
         /**
-         * adds a float to the CustomModelData of a ItemMeta
-         * float
+         * Replaces the custom model data with a single float value.
+         *
+         * @param f Float to store in the custom model data component.
          */
         fun ItemMeta.setCustomModelData(f: Float) {
             val modelDataComponent = this.customModelDataComponent
@@ -28,8 +31,9 @@ class ItemMetaInjections {
         }
 
         /**
-         * adds a string to the CustomModelData of a ItemMeta
-         * string
+         * Replaces the custom model data with a single string value.
+         *
+         * @param s String to store in the custom model data component.
          */
         fun ItemMeta.setCustomModelData(s: String) {
             val modelDataComponent = this.customModelDataComponent
@@ -38,8 +42,9 @@ class ItemMetaInjections {
         }
 
         /**
-         * adds a color to the CustomModelData of a ItemMeta
-         * color
+         * Replaces the custom model data with a single color value.
+         *
+         * @param c Color to store in the custom model data component.
          */
         fun ItemMeta.setCustomModelData(c: Color) {
             val modelDataComponent = this.customModelDataComponent
@@ -48,8 +53,9 @@ class ItemMetaInjections {
         }
 
         /**
-         * adds a flag to the CustomModelData of a ItemMeta
-         * boolean
+         * Replaces the custom model data with a single boolean flag.
+         *
+         * @param b Boolean flag to store in the custom model data component.
          */
         fun ItemMeta.setCustomModelData(b: Boolean) {
             val modelDataComponent = this.customModelDataComponent
@@ -58,16 +64,16 @@ class ItemMetaInjections {
         }
 
         /**
-         * checks if the ItemMeta has a CustomModelData
+         * Determines whether this item meta contains any custom model data.
          */
         fun ItemMeta.hasCustomModelData(): Boolean {
             return hasCustomModelDataComponent()
         }
 
-
         /**
-         * checks if the ItemMeta has a specific CustomModelData
-         * float
+         * Checks if the custom model data contains the specified float value.
+         *
+         * @param f Float value to look for.
          */
         fun ItemMeta.hasCustomModelData(f: Float): Boolean {
             val modelDataComponent = this.customModelDataComponent
@@ -75,8 +81,9 @@ class ItemMetaInjections {
         }
 
         /**
-         * checks if the ItemMeta has a specific CustomModelData
-         * string
+         * Checks if the custom model data contains the specified string value.
+         *
+         * @param s String value to look for.
          */
         fun ItemMeta.hasCustomModelData(s: String): Boolean {
             val modelDataComponent = this.customModelDataComponent
@@ -84,8 +91,9 @@ class ItemMetaInjections {
         }
 
         /**
-         * checks if the ItemMeta has a specific CustomModelData
-         * color
+         * Checks if the custom model data contains the specified color value.
+         *
+         * @param c Color value to look for.
          */
         fun ItemMeta.hasCustomModelData(c: Color): Boolean {
             val modelDataComponent = this.customModelDataComponent
@@ -93,8 +101,9 @@ class ItemMetaInjections {
         }
 
         /**
-         * checks if the ItemMeta has a specific CustomModelData
-         * boolean
+         * Checks if the custom model data contains the specified boolean flag.
+         *
+         * @param b Boolean flag to look for.
          */
         fun ItemMeta.hasCustomModelData(b: Boolean): Boolean {
             val modelDataComponent = this.customModelDataComponent
