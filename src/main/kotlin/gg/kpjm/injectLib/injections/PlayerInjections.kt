@@ -1,7 +1,9 @@
 package gg.kpjm.injectLib.injections
 
 import gg.kpjm.injectLib.InjectLib.Companion.prefix
+import io.papermc.paper.entity.TeleportFlag
 import net.kyori.adventure.text.minimessage.MiniMessage
+import org.bukkit.Location
 import org.bukkit.entity.Player
 
 class PlayerInjections {
@@ -42,6 +44,18 @@ class PlayerInjections {
          */
         fun Player.sendMiniMessageActionBarWithPrefix(s: String) {
             sendActionBar(MiniMessage.miniMessage().deserialize("$prefix $s"))
+        }
+
+        fun Player.teleportWithPassengers(loc: Location) {
+            teleport(loc, TeleportFlag.EntityState.RETAIN_PASSENGERS)
+        }
+
+        fun Player.teleportWithVehicles(loc: Location) {
+            teleport(loc, TeleportFlag.EntityState.RETAIN_VEHICLE)
+        }
+
+        fun Player.teleportOpenInventory(loc: Location) {
+            teleport(loc, TeleportFlag.EntityState.RETAIN_OPEN_INVENTORY)
         }
     }
 

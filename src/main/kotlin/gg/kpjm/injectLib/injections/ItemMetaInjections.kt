@@ -4,6 +4,7 @@ import net.kyori.adventure.text.minimessage.MiniMessage
 import org.bukkit.Color
 import org.bukkit.inventory.meta.ItemMeta
 import org.jetbrains.annotations.ApiStatus
+
 @ApiStatus.Experimental
 class ItemMetaInjections {
 
@@ -108,6 +109,14 @@ class ItemMetaInjections {
         fun ItemMeta.hasCustomModelData(b: Boolean): Boolean {
             val modelDataComponent = this.customModelDataComponent
             return modelDataComponent.flags.contains(b)
+        }
+
+        fun ItemMeta.customModelDataFloat(): Float {
+            if (hasCustomModelDataComponent()) {
+                val modelDataComponent = this.customModelDataComponent
+                return modelDataComponent.floats[0]
+            }
+            return 0f
         }
     }
 
