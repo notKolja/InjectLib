@@ -7,6 +7,8 @@ class InjectLib : JavaPlugin() {
     companion object {
         @JvmStatic
         var prefix: String = "<dark_gray>[<gold>Inject<green>Lib<dark_gray>]"
+        @JvmStatic
+        val plugin: JavaPlugin? = null
     }
 
     override fun onEnable() {
