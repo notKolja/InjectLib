@@ -14,7 +14,7 @@ class ServerInjections {
             if (plugin != null) {
                 this.pluginManager.registerEvents(listener, plugin!!)
             } else {
-                logger.severe("plugin is null")
+                logger.severe("plugin is null: Assign with InjectLib.plugin = this in the onEnable Method")
             }
         }
     }
