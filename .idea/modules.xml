@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/injectlib.iml" filepath="$PROJECT_DIR$/injectlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/InjectLib.iml" filepath="$PROJECT_DIR$/.idea/InjectLib.iml" />
     </modules>
   </component>
 </project>
