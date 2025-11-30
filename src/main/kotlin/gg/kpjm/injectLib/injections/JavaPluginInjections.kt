@@ -30,10 +30,11 @@ class JavaPluginInjections {
         fun JavaPlugin.addPaperCommand(
             name: String,
             description: String = "",
+            aliases: List<String> = emptyList(),
             command: BasicCommand
         ) {
             lifecycleManager.registerEventHandler(LifecycleEvents.COMMANDS) { event ->
-                event.registrar().register(name, description, command)
+                event.registrar().register(name, description, aliases, command)
             }
         }
     }
