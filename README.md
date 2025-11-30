@@ -30,7 +30,7 @@ A lightweight Kotlin library for **Paper/Spigot 1.21+** that provides useful ext
     <dependency>
         <groupId>com.github.notKolja</groupId>
         <artifactId>InjectLib</artifactId>
-        <version>0.1.1</version>
+        <version>0.1.9</version>
     </dependency>
 </dependencies>
 ```
@@ -40,7 +40,7 @@ repositories {
     maven("https://jitpack.io")
 }
 dependencies {
-    implementation("com.github.notKolja:InjectLib:0.1.1")
+    implementation("com.github.notKolja:InjectLib:0.1.9")
 }
 ```
 **Gradle Groovy DSL**
@@ -49,7 +49,7 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 dependencies {
-    implementation 'com.github.notKolja:InjectLib:0.1.1'
+    implementation 'com.github.notKolja:InjectLib:0.1.9'
 }
 ```
 
