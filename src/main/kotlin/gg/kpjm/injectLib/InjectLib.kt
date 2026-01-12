@@ -12,7 +12,6 @@ class InjectLib : JavaPlugin() {
     }
 
     override fun onEnable() {
-        prefix = "<dark_gray>[<gold>Inject<green>Lib<dark_gray>]"
     }
 
     override fun onDisable() {

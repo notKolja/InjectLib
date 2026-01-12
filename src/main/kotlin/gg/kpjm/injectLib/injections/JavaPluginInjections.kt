@@ -7,6 +7,7 @@ import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.command.TabCompleter
 import org.bukkit.event.Listener
+import org.bukkit.inventory.Inventory
 import org.bukkit.plugin.java.JavaPlugin
 
 class JavaPluginInjections {
@@ -24,18 +25,23 @@ class JavaPluginInjections {
                 command.tabCompleter = tabCompleter
             }
 
-
         }
 
         fun JavaPlugin.addPaperCommand(
             name: String,
             description: String = "",
             aliases: List<String> = emptyList(),
+            permission: String? = null,
             command: BasicCommand
         ) {
             lifecycleManager.registerEventHandler(LifecycleEvents.COMMANDS) { event ->
-                event.registrar().register(name, description, aliases, command)
+                event.registrar().register(name, description, aliases, command).also { registered ->
+                    if (permission != null) {
+
+                    }
+                }
             }
         }
+
     }
 }
