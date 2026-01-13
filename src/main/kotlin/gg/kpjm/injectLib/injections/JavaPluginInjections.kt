@@ -31,14 +31,10 @@ class JavaPluginInjections {
             name: String,
             description: String = "",
             aliases: List<String> = emptyList(),
-            permission: String? = null,
             command: BasicCommand
         ) {
             lifecycleManager.registerEventHandler(LifecycleEvents.COMMANDS) { event ->
                 event.registrar().register(name, description, aliases, command).also { registered ->
-                    if (permission != null) {
-
-                    }
                 }
             }
         }
