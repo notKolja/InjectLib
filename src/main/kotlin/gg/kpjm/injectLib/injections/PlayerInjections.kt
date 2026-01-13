@@ -25,7 +25,7 @@ class PlayerInjections {
          * @param s MiniMessage string to send after the prefix.
          */
         fun Player.sendMiniMessageWithPrefix(s: String) {
-            sendMessage(MiniMessage.miniMessage().deserialize("$prefix $s"))
+            sendMessage(MiniMessage.miniMessage().deserialize("$prefix$s"))
         }
 
         /**
